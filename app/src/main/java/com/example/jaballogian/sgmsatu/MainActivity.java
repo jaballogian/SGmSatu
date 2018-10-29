@@ -22,23 +22,23 @@ public class MainActivity extends AppCompatActivity {
             FragmentTransaction transaction = fragmentManager.beginTransaction();
             switch (item.getItemId()) {
                 case R.id.navigation_beranda:
-                    transaction.replace(R.id.content, new BerandaFragment()).commit();
+                    transaction.replace(R.id.frameContainerMainActivity, new BerandaFragment()).commit();
                     //mTextMessage.setText("Beranda");
                     return true;
                 case R.id.navigation_help:
-                    transaction.replace(R.id.content, new BantuanFragment()).commit();
+                    transaction.replace(R.id.frameContainerMainActivity, new BantuanFragment()).commit();
                     //mTextMessage.setText("Bantuan");
                     return true;
                 case R.id.navigation_pesan:
-                    transaction.replace(R.id.content, new PesanFragment()).commit();
+                    transaction.replace(R.id.frameContainerMainActivity, new PesanFragment()).commit();
                     //mTextMessage.setText("Pesan");
                     return true;
                 case R.id.navigation_notifikasi:
-                    transaction.replace(R.id.content, new NotifikasiFragment()).commit();
+                    transaction.replace(R.id.frameContainerMainActivity, new NotifikasiFragment()).commit();
                     //mTextMessage.setText("Notifikasi");
                     return true;
                 case R.id.navigation_profilku:
-                    transaction.replace(R.id.content, new ProfilkuFragment()).commit();
+                    transaction.replace(R.id.frameContainerMainActivity, new ProfilkuFragment()).commit();
                     //mTextMessage.setText("Profilku");
                     return true;
             }
