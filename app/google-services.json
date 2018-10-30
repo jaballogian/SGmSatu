@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "493404627562",
+    "firebase_url": "https://sgmsatu-f8bb3.firebaseio.com",
+    "project_id": "sgmsatu-f8bb3",
+    "storage_bucket": "sgmsatu-f8bb3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:493404627562:android:b58aadf77a65adef",
+        "android_client_info": {
+          "package_name": "com.example.jaballogian.sgmsatu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "493404627562-kni84e7ait5mr7bn170e5f3cl8quatba.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.jaballogian.sgmsatu",
+            "certificate_hash": "f22decb99cdf8b99ede489e92bf756a7bd613b4f"
+          }
+        },
+        {
+          "client_id": "493404627562-hcpa535itjr5fc6bfafi3qfl5nqfj8al.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcXnPV6Mdlu4DEmh8R6I7WQETgL-9dCgg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "493404627562-hcpa535itjr5fc6bfafi3qfl5nqfj8al.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

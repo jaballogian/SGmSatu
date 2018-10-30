@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LogInActivity"
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark">
+
+    <TextView
+        android:id="@+id/selamatDatangTextViewLogInActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selamat Datang"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+    <ImageView
+        android:id="@+id/logoSGMImageViewLogInActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sgm"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/selamatDatangTextViewLogInActivity"
+        android:layout_marginTop="35dp"/>
+
+    <TextView
+        android:id="@+id/akuAnakSGMTextViewLogInActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="#AkuAnakSGM"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:id="@+id/logInTextViewLogInActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_above="@id/emailEditTextLogInActivity"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/emailEditTextLogInActivity"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:layout_above="@id/passwordEditTextLogInActivity"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:inputType="textEmailAddress"/>
+
+    <EditText
+        android:id="@+id/passwordEditTextLogInActivity"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/belumPunyaAkunTextViewLogInActivity"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/black"
+        android:inputType="textPassword"/>
+
+    <TextView
+        android:id="@+id/belumPunyaAkunTextViewLogInActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Belum punya akun? Register di sini"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_above="@id/masukDenganGoogleButtonLogInActivity"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/masukDenganGoogleButtonLogInActivity"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Masuk dengan akun Google"
+        android:textAllCaps="false"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:drawableLeft="@drawable/google"
+        android:paddingLeft="10dp"/>
+
+</RelativeLayout>
