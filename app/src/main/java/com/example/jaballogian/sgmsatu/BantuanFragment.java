@@ -1,12 +1,16 @@
 package com.example.jaballogian.sgmsatu;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,6 +34,9 @@ public class BantuanFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+
+    private ImageButton webButton, callButton, headPhoneButton, emailButton;
+    private TextView webTextView, callTextView, headPhoneTextView, emailTextView;
 
     public BantuanFragment() {
         // Required empty public constructor
@@ -66,9 +73,118 @@ public class BantuanFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_bantuan, container, false);
+        final View view = inflater.inflate(R.layout.fragment_bantuan, container, false);
+
+        ImageButton webButton = (ImageButton) view.findViewById(R.id.webSGMImageButtonBantuanFragment);
+        ImageButton callButton = (ImageButton) view.findViewById(R.id.callSGMImageButtonBantuanFragment);
+        ImageButton headPhoneButton = (ImageButton) view.findViewById(R.id.headPhoneSGMImageButtonBantuanFragment);
+        ImageButton emailButton = (ImageButton) view.findViewById(R.id.emailSGMImageButtonBantuanFragment);
+
+        TextView webTextView = (TextView) view.findViewById(R.id.webSGMTextViewBantuanFragment);
+        TextView callTextView = (TextView) view.findViewById(R.id.callSGMTextViewBantuanFragment);
+        TextView headPhoneTextView = (TextView) view.findViewById(R.id.headPhoneSGMTextViewBantuanFragment);
+        TextView emailTextView = (TextView) view.findViewById(R.id.emailSGMTextViewBantuanFragment);
+
+        webButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                webSGM(v);
+            }
+        });
+
+        callButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                callSGM(v);
+            }
+        });
+
+        headPhoneButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                headPhoneSGM(v);
+            }
+        });
+
+        emailButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                emailSGM(v);
+            }
+        });
+
+        webTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                webSGM(v);
+            }
+        });
+
+        callTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                callSGM(v);
+            }
+        });
+
+        headPhoneTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                headPhoneSGM(v);
+            }
+        });
+
+        emailTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                emailSGM(v);
+            }
+        });
 
         return view;
+    }
+
+    public void webSGM(View view){
+
+        Intent openSGMWeb = new Intent(Intent.ACTION_VIEW);
+        openSGMWeb.setData(Uri.parse("https://www.generasimaju.co.id/hubungi-kami"));
+        startActivity(openSGMWeb);
+    }
+
+    public void callSGM(View view){
+
+        Intent phoneCallSGM = new Intent(Intent.ACTION_CALL);
+        phoneCallSGM.setData(Uri.parse("085724446995"));
+        startActivity(phoneCallSGM);
+    }
+
+    public void headPhoneSGM(View view){
+
+        Intent phoneCallSGM = new Intent(Intent.ACTION_CALL);
+        phoneCallSGM.setData(Uri.parse("085724446995"));
+        startActivity(phoneCallSGM);
+    }
+
+    public void emailSGM(View v){
+
+        Intent sendSGMEmail = new Intent(Intent.ACTION_SEND);
+        String[] TO = {""};
+        String[] CC = {""};
+
+        sendSGMEmail.setData(Uri.parse("mailto:"));
+        sendSGMEmail.setType("text/plain");
+        sendSGMEmail.putExtra(Intent.EXTRA_EMAIL, TO);
+        sendSGMEmail.putExtra(Intent.EXTRA_CC, CC);
+        sendSGMEmail.putExtra(Intent.EXTRA_SUBJECT, "Your subject");
+        sendSGMEmail.putExtra(Intent.EXTRA_TEXT, "Email message goes here");
     }
 
     // TODO: Rename method, update argument and hook method into UI event

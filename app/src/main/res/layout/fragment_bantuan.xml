@@ -3,12 +3,170 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".BantuanFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="bantuan fragment" />
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Tentang Kami"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:gravity="center"/>
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:text="Hai Bunda, apabila masih memiliki pertanyaan, silahkan kunjungi website kami atau hubungi call center kami."/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_account_balance_red_36dp"
+                android:layout_gravity="center"
+                android:background=""/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PT. Sarihusada Generasi Mahardika Gedung Cyber 2, Lantai 15"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_location_on_red_36dp"
+                android:layout_gravity="center"
+                android:background=""/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jl. H.R Rasuna Said Blok X-5 No.13, Jakarta, 12950"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/webSGMLinearLayoutBantuanFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageButton
+                android:id="@+id/webSGMImageButtonBantuanFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_language_red_36dp"
+                android:layout_gravity="center"
+                android:background=""/>
+
+            <TextView
+                android:id="@+id/webSGMTextViewBantuanFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="https://www.generasimaju.co.id/hubungi-kami"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/callSGMLinearLayoutBantuanFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageButton
+                android:id="@+id/callSGMImageButtonBantuanFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_local_phone_red_36dp"
+                android:layout_gravity="center"
+                android:background=""/>
+
+            <TextView
+                android:id="@+id/callSGMTextViewBantuanFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="+62 21 299 61 555 (hunting)"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/headPhoneSGMLinearLayoutBantuanFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageButton
+                android:id="@+id/headPhoneSGMImageButtonBantuanFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_headset_red_36dp"
+                android:layout_gravity="center"
+                android:background=""/>
+
+            <TextView
+                android:id="@+id/headPhoneSGMTextViewBantuanFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0800-1-360-360 (Layanan bebas pulsa)"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/emailSGMLinearLayoutBantuanFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageButton
+                android:id="@+id/emailSGMImageButtonBantuanFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_mail_red_36dp"
+                android:layout_gravity="center"
+                android:background=""/>
+
+            <TextView
+                android:id="@+id/emailSGMTextViewBantuanFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="carelinesgm@sarihusada.co.id"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+    </LinearLayout>
 
 </FrameLayout>
