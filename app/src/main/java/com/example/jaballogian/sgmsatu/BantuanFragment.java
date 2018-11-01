@@ -100,7 +100,7 @@ public class BantuanFragment extends Fragment {
             public void onClick(View v) {
 
                 Intent phoneCallSGM = new Intent(Intent.ACTION_CALL);
-                phoneCallSGM.setData(Uri.parse("tel:085724446995"));
+                phoneCallSGM.setData(Uri.parse("tel:+622129961555"));
                 startActivity(phoneCallSGM);
             }
         });
@@ -110,7 +110,7 @@ public class BantuanFragment extends Fragment {
             public void onClick(View v) {
 
                 Intent phoneCallSGM = new Intent(Intent.ACTION_CALL);
-                phoneCallSGM.setData(Uri.parse("tel:085724446995"));
+                phoneCallSGM.setData(Uri.parse("tel:08001360360"));
                 startActivity(phoneCallSGM);
             }
         });
@@ -144,7 +144,7 @@ public class BantuanFragment extends Fragment {
             public void onClick(View v) {
 
                 Intent phoneCallSGM = new Intent(Intent.ACTION_CALL);
-                phoneCallSGM.setData(Uri.parse("085724446995"));
+                phoneCallSGM.setData(Uri.parse("+622129961555"));
                 startActivity(phoneCallSGM);
             }
         });
@@ -154,7 +154,7 @@ public class BantuanFragment extends Fragment {
             public void onClick(View v) {
 
                 Intent phoneCallSGM = new Intent(Intent.ACTION_CALL);
-                phoneCallSGM.setData(Uri.parse("085724446995"));
+                phoneCallSGM.setData(Uri.parse("08001360360"));
                 startActivity(phoneCallSGM);
             }
         });
