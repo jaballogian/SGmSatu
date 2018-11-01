@@ -9,7 +9,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@color/white">
 
         <TextView
             android:layout_width="match_parent"
@@ -40,7 +41,7 @@
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/ic_account_balance_red_36dp"
                 android:layout_gravity="center"
-                android:background=""/>
+                android:background="@color/white"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -61,7 +62,7 @@
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/ic_location_on_red_36dp"
                 android:layout_gravity="center"
-                android:background=""/>
+                android:background="@color/white"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -84,7 +85,7 @@
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/ic_language_red_36dp"
                 android:layout_gravity="center"
-                android:background=""/>
+                android:background="@color/white"/>
 
             <TextView
                 android:id="@+id/webSGMTextViewBantuanFragment"
@@ -108,7 +109,7 @@
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/ic_local_phone_red_36dp"
                 android:layout_gravity="center"
-                android:background=""/>
+                android:background="@color/white"/>
 
             <TextView
                 android:id="@+id/callSGMTextViewBantuanFragment"
@@ -132,7 +133,7 @@
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/ic_headset_red_36dp"
                 android:layout_gravity="center"
-                android:background=""/>
+                android:background="@color/white"/>
 
             <TextView
                 android:id="@+id/headPhoneSGMTextViewBantuanFragment"
@@ -156,7 +157,7 @@
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/ic_mail_red_36dp"
                 android:layout_gravity="center"
-                android:background=""/>
+                android:background="@color/white"/>
 
             <TextView
                 android:id="@+id/emailSGMTextViewBantuanFragment"

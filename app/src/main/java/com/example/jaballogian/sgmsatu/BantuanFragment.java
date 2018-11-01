@@ -89,7 +89,9 @@ public class BantuanFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                webSGM(v);
+                Intent openSGMWeb = new Intent(Intent.ACTION_VIEW);
+                openSGMWeb.setData(Uri.parse("https://www.generasimaju.co.id/hubungi-kami"));
+                startActivity(openSGMWeb);
             }
         });
 
@@ -97,7 +99,9 @@ public class BantuanFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                callSGM(v);
+                Intent phoneCallSGM = new Intent(Intent.ACTION_CALL);
+                phoneCallSGM.setData(Uri.parse("tel:085724446995"));
+                startActivity(phoneCallSGM);
             }
         });
 
@@ -105,7 +109,9 @@ public class BantuanFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                headPhoneSGM(v);
+                Intent phoneCallSGM = new Intent(Intent.ACTION_CALL);
+                phoneCallSGM.setData(Uri.parse("tel:085724446995"));
+                startActivity(phoneCallSGM);
             }
         });
 
@@ -113,7 +119,13 @@ public class BantuanFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                emailSGM(v);
+                String[] TO = {"carelinesgm@sarihusada.co.id"};
+
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_EMAIL, TO);
+                sendIntent.setType("text/plain");
+                startActivity(sendIntent);
             }
         });
 
@@ -121,7 +133,9 @@ public class BantuanFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                webSGM(v);
+                Intent openSGMWeb = new Intent(Intent.ACTION_VIEW);
+                openSGMWeb.setData(Uri.parse("https://www.generasimaju.co.id/hubungi-kami"));
+                startActivity(openSGMWeb);
             }
         });
 
@@ -129,7 +143,9 @@ public class BantuanFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                callSGM(v);
+                Intent phoneCallSGM = new Intent(Intent.ACTION_CALL);
+                phoneCallSGM.setData(Uri.parse("085724446995"));
+                startActivity(phoneCallSGM);
             }
         });
 
@@ -137,7 +153,9 @@ public class BantuanFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                headPhoneSGM(v);
+                Intent phoneCallSGM = new Intent(Intent.ACTION_CALL);
+                phoneCallSGM.setData(Uri.parse("085724446995"));
+                startActivity(phoneCallSGM);
             }
         });
 
@@ -145,46 +163,17 @@ public class BantuanFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                emailSGM(v);
+                String[] TO = {"carelinesgm@sarihusada.co.id"};
+
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_EMAIL, TO);
+                sendIntent.setType("text/plain");
+                startActivity(sendIntent);
             }
         });
 
         return view;
-    }
-
-    public void webSGM(View view){
-
-        Intent openSGMWeb = new Intent(Intent.ACTION_VIEW);
-        openSGMWeb.setData(Uri.parse("https://www.generasimaju.co.id/hubungi-kami"));
-        startActivity(openSGMWeb);
-    }
-
-    public void callSGM(View view){
-
-        Intent phoneCallSGM = new Intent(Intent.ACTION_CALL);
-        phoneCallSGM.setData(Uri.parse("085724446995"));
-        startActivity(phoneCallSGM);
-    }
-
-    public void headPhoneSGM(View view){
-
-        Intent phoneCallSGM = new Intent(Intent.ACTION_CALL);
-        phoneCallSGM.setData(Uri.parse("085724446995"));
-        startActivity(phoneCallSGM);
-    }
-
-    public void emailSGM(View v){
-
-        Intent sendSGMEmail = new Intent(Intent.ACTION_SEND);
-        String[] TO = {""};
-        String[] CC = {""};
-
-        sendSGMEmail.setData(Uri.parse("mailto:"));
-        sendSGMEmail.setType("text/plain");
-        sendSGMEmail.putExtra(Intent.EXTRA_EMAIL, TO);
-        sendSGMEmail.putExtra(Intent.EXTRA_CC, CC);
-        sendSGMEmail.putExtra(Intent.EXTRA_SUBJECT, "Your subject");
-        sendSGMEmail.putExtra(Intent.EXTRA_TEXT, "Email message goes here");
     }
 
     // TODO: Rename method, update argument and hook method into UI event
