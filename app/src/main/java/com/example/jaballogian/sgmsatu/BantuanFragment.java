@@ -35,9 +35,6 @@ public class BantuanFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    private ImageButton webButton, callButton, headPhoneButton, emailButton;
-    private TextView webTextView, callTextView, headPhoneTextView, emailTextView;
-
     public BantuanFragment() {
         // Required empty public constructor
     }

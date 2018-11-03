@@ -5,10 +5,311 @@
     android:layout_height="match_parent"
     tools:context=".ProfilkuFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="profilku fragment" />
+        android:orientation="vertical">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="horizontal"
+            android:background="@color/colorPrimaryDark">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@color/colorPrimary"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"/>
+            
+            <LinearLayout
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp">
+                
+                <TextView
+                    android:id="@+id/namaUserTextViewProfilkuFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nama User"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/noTelpUserTextViewProfilkuFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No. Telpon User"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/pointUserTextViewProfilkuFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Point User"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:src="@drawable/sgm"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/pink"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/belumBayarImageButtonProfilkuFragment"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/ic_account_balance_wallet_black_24dp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/belumBayarTextViewProfilkuFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:text="Belum Bayar"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:textColor="@color/colorPrimaryDark" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/pengemasanImageButtonProfilkuFragment"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/ic_card_travel_black_24dp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/pengemasanTextViewProfilkuFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:text="Pengemasan"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:textColor="@color/colorPrimaryDark" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/pengirimanImageButtonProfilkuFragment"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/ic_local_shipping_black_24dp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/pengirimanTextViewProfilkuFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:text="Pengiriman"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:textColor="@color/colorPrimaryDark" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/pembatalanImageButtonProfilkuFragment"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/ic_cancel_black_24dp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/pembatalanTextViewProfilkuFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:text="Pembatalan"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:textColor="@color/colorPrimaryDark" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/pink">
+            
+            <ImageButton
+                android:id="@+id/penilaiankuImageButtonProfilkuFragment"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:background="@drawable/ic_stars_orange_24dp"/>
+
+            <TextView
+                android:id="@+id/penilaiankuTextViewProfilkuFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Penilaianku"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_gravity="center"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/pink">
+
+            <ImageButton
+                android:id="@+id/terakhirDilihatImageButtonProfilkuFragment"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_history_green_24dp"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"/>
+
+            <TextView
+                android:id="@+id/terakhirDilihatTextViewProfilkuFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Terakhir Dilihat"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_gravity="center"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/pink">
+
+            <ImageButton
+                android:id="@+id/favoritkuImageButtonProfilkuFragment"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_favorite_red_24dp"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"/>
+
+            <TextView
+                android:id="@+id/favoritkuTextViewProfilkuFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Favoritku"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_gravity="center"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/pink">
+
+            <ImageButton
+                android:id="@+id/postingankuImageButtonProfilkuFragment"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_book_blue_24dp"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"/>
+
+            <TextView
+                android:id="@+id/postingankuTextViewProfilkuFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Postinganku"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_gravity="center"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/pink">
+
+            <ImageButton
+                android:id="@+id/riwayatPembelianImageButtonProfilkuFragment"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_event_note_yellow_24dp"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"/>
+
+            <TextView
+                android:id="@+id/riwayatPembelianTextViewProfilkuFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Riwayat Pembelian"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_gravity="center"
+                android:textSize="20sp"/>
+        </LinearLayout>
+    </LinearLayout>
 
 </FrameLayout>
