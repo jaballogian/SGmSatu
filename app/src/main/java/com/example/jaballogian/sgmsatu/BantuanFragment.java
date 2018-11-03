@@ -1,12 +1,16 @@
 package com.example.jaballogian.sgmsatu;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,6 +34,9 @@ public class BantuanFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+
+    private ImageButton webButton, callButton, headPhoneButton, emailButton;
+    private TextView webTextView, callTextView, headPhoneTextView, emailTextView;
 
     public BantuanFragment() {
         // Required empty public constructor
@@ -66,7 +73,105 @@ public class BantuanFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_bantuan, container, false);
+        final View view = inflater.inflate(R.layout.fragment_bantuan, container, false);
+
+        ImageButton webButton = (ImageButton) view.findViewById(R.id.webSGMImageButtonBantuanFragment);
+        ImageButton callButton = (ImageButton) view.findViewById(R.id.callSGMImageButtonBantuanFragment);
+        ImageButton headPhoneButton = (ImageButton) view.findViewById(R.id.headPhoneSGMImageButtonBantuanFragment);
+        ImageButton emailButton = (ImageButton) view.findViewById(R.id.emailSGMImageButtonBantuanFragment);
+
+        TextView webTextView = (TextView) view.findViewById(R.id.webSGMTextViewBantuanFragment);
+        TextView callTextView = (TextView) view.findViewById(R.id.callSGMTextViewBantuanFragment);
+        TextView headPhoneTextView = (TextView) view.findViewById(R.id.headPhoneSGMTextViewBantuanFragment);
+        TextView emailTextView = (TextView) view.findViewById(R.id.emailSGMTextViewBantuanFragment);
+
+        webButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent openSGMWeb = new Intent(Intent.ACTION_VIEW);
+                openSGMWeb.setData(Uri.parse("https://www.generasimaju.co.id/hubungi-kami"));
+                startActivity(openSGMWeb);
+            }
+        });
+
+        callButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent phoneCallSGM = new Intent(Intent.ACTION_CALL);
+                phoneCallSGM.setData(Uri.parse("tel:+622129961555"));
+                startActivity(phoneCallSGM);
+            }
+        });
+
+        headPhoneButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent phoneCallSGM = new Intent(Intent.ACTION_CALL);
+                phoneCallSGM.setData(Uri.parse("tel:08001360360"));
+                startActivity(phoneCallSGM);
+            }
+        });
+
+        emailButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String[] TO = {"carelinesgm@sarihusada.co.id"};
+
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_EMAIL, TO);
+                sendIntent.setType("text/plain");
+                startActivity(sendIntent);
+            }
+        });
+
+        webTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent openSGMWeb = new Intent(Intent.ACTION_VIEW);
+                openSGMWeb.setData(Uri.parse("https://www.generasimaju.co.id/hubungi-kami"));
+                startActivity(openSGMWeb);
+            }
+        });
+
+        callTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent phoneCallSGM = new Intent(Intent.ACTION_CALL);
+                phoneCallSGM.setData(Uri.parse("+622129961555"));
+                startActivity(phoneCallSGM);
+            }
+        });
+
+        headPhoneTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent phoneCallSGM = new Intent(Intent.ACTION_CALL);
+                phoneCallSGM.setData(Uri.parse("08001360360"));
+                startActivity(phoneCallSGM);
+            }
+        });
+
+        emailTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String[] TO = {"carelinesgm@sarihusada.co.id"};
+
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_EMAIL, TO);
+                sendIntent.setType("text/plain");
+                startActivity(sendIntent);
+            }
+        });
 
         return view;
     }
