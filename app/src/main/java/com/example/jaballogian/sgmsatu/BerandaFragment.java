@@ -7,6 +7,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 
@@ -29,6 +32,14 @@ public class BerandaFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+
+    private ImageButton imgBtnMain;
+
+    private ImageButton[] imgBtnSide, imgBtnMiddle, imgBtnBottom;
+
+    private Button btnSelengkapnya, btnBeliProduct;
+
+    private SearchView srcViewSearch;
 
     public BerandaFragment() {
         // Required empty public constructor
@@ -66,7 +77,36 @@ public class BerandaFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_beranda, container, false);
+
+        imgBtnMain = (ImageButton) view.findViewById(R.id.mainProductImageButtonBerandaFragment);
+        btnSelengkapnya = (Button) view.findViewById(R.id.selengkapnyaButtonBerandaFragment);
+        btnBeliProduct = (Button) view.findViewById(R.id.beliProductButtonBerandaFragment);
+        srcViewSearch = (SearchView) view.findViewById(R.id.searchSearchViewBerandaFragment);
+
+        imgBtnMiddle = new ImageButton[3];
+        imgBtnSide = new ImageButton[3];
+        imgBtnBottom = new ImageButton[3];
+
+        imgBtnMiddle[0] = (ImageButton) view.findViewById(R.id.middleProduct0ImageButtonBerandaFragment);
+        imgBtnMiddle[1] = (ImageButton) view.findViewById(R.id.middleProduct1ImageButtonBerandaFragment);
+        imgBtnMiddle[2] = (ImageButton) view.findViewById(R.id.middleProduct2ImageButtonBerandaFragment);
+
+        imgBtnSide[0] = (ImageButton) view.findViewById(R.id.sideProduct0ImageButtonBerandaFragment);
+        imgBtnSide[1] = (ImageButton) view.findViewById(R.id.sideProduct1ImageButtonBerandaFragment);
+        imgBtnSide[2] = (ImageButton) view.findViewById(R.id.sideProduct2ImageButtonBerandaFragment);
+
+        imgBtnBottom[0] = (ImageButton) view.findViewById(R.id.bottomProduct0ImageButtonBerandaFragment);
+        imgBtnBottom[1] = (ImageButton) view.findViewById(R.id.bottomProduct1ImageButtonBerandaFragment);
+        imgBtnBottom[2] = (ImageButton) view.findViewById(R.id.bottomProduct2ImageButtonBerandaFragment);
+
+        bindEvent();
+
         return view;
+    }
+
+    private void bindEvent()
+    {
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event

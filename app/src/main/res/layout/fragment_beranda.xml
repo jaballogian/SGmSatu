@@ -3,12 +3,192 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".BerandaFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="beranda fragment" />
+        android:orientation="vertical"
+        android:background="@color/white">
 
+        <!-- Search tools-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:layout_weight="0"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/sgm"/>
+
+            <SearchView
+                android:id="@+id/searchSearchViewBerandaFragment"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+            </SearchView>
+
+            <Button
+                android:id="@+id/beliProductButtonBerandaFragment"
+                android:layout_weight="0"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="Beli Product"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_red_button"
+                android:textColor="@color/white"
+                android:paddingHorizontal="20dp"
+                android:textAllCaps="false"
+                android:layout_marginRight="10dp"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/banner_sgm"/>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/mainProductImageButtonBerandaFragment"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_language_red_36dp"
+                android:background="@color/white"/>
+
+            <LinearLayout
+                android:layout_weight="3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/sideProduct0ImageButtonBerandaFragment"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/ic_language_red_36dp"
+                    android:background="@color/white"/>
+
+                <ImageButton
+                    android:id="@+id/sideProduct1ImageButtonBerandaFragment"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/ic_language_red_36dp"
+                    android:background="@color/white"/>
+
+                <ImageButton
+                    android:id="@+id/sideProduct2ImageButtonBerandaFragment"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/ic_language_red_36dp"
+                    android:background="@color/white"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/middleProduct0ImageButtonBerandaFragment"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_language_red_36dp"
+                android:background="@color/white"/>
+
+            <ImageButton
+                android:id="@+id/middleProduct1ImageButtonBerandaFragment"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_language_red_36dp"
+                android:background="@color/white"/>
+
+            <ImageButton
+                android:id="@+id/middleProduct2ImageButtonBerandaFragment"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_language_red_36dp"
+                android:background="@color/white"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/selengkapnyaButtonBerandaFragment"
+            android:layout_weight="0"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Lihat Selengkapnya"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_red_button"
+            android:textColor="@color/white"
+            android:layout_marginVertical="10dp"
+            android:paddingHorizontal="20dp"
+            android:textAllCaps="false"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Produck SGM"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginVertical="5dp"
+            android:textSize="15dp"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <LinearLayout
+            android:layout_weight="4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/bottomProduct0ImageButtonBerandaFragment"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_language_red_36dp"
+                android:background="@color/white"/>
+
+            <ImageButton
+                android:id="@+id/bottomProduct1ImageButtonBerandaFragment"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_language_red_36dp"
+                android:background="@color/white"/>
+
+            <ImageButton
+                android:id="@+id/bottomProduct2ImageButtonBerandaFragment"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_language_red_36dp"
+                android:background="@color/white"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
 </FrameLayout>
