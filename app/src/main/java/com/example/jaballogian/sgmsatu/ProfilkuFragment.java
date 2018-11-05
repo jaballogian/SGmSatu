@@ -1,13 +1,19 @@
 package com.example.jaballogian.sgmsatu;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 
 /**
@@ -65,7 +71,43 @@ public class ProfilkuFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_profilku, container, false);
+        final View view = inflater.inflate(R.layout.fragment_profilku, container, false);
+
+        ImageButton belumBayarImageButton = (ImageButton) view.findViewById(R.id.belumBayarImageButtonProfilkuFragment);
+        ImageButton pengemasanImageButton = (ImageButton) view.findViewById(R.id.pengemasanImageButtonProfilkuFragment);
+        ImageButton pengirimanImageButton = (ImageButton) view.findViewById(R.id.pengirimanImageButtonProfilkuFragment);
+        ImageButton pembatalanImageButton = (ImageButton) view.findViewById(R.id.pembatalanImageButtonProfilkuFragment);
+
+        ImageButton penilaiankuImageButton = (ImageButton) view.findViewById(R.id.penilaiankuImageButtonProfilkuFragment);
+        ImageButton terakhirDilihatImageButton = (ImageButton) view.findViewById(R.id.terakhirDilihatImageButtonProfilkuFragment);
+        ImageButton favoriktuImageButton = (ImageButton) view.findViewById(R.id.favoritkuImageButtonProfilkuFragment);
+        ImageButton postingankuImageButton = (ImageButton) view.findViewById(R.id.postingankuImageButtonProfilkuFragment);
+        ImageButton riwayatPembelianImageButton = (ImageButton) view.findViewById(R.id.riwayatPembelianImageButtonProfilkuFragment);
+
+        ImageButton logOut = (ImageButton) view.findViewById(R.id.sgmLogoImageViewProfilkuFragment);
+
+        TextView belumBayarTextView = (TextView) view.findViewById(R.id.belumBayarTextViewProfilkuFragment);
+        TextView pengemasanTextView = (TextView) view.findViewById(R.id.pengemasanTextViewProfilkuFragment);
+        TextView pengirimanTextView = (TextView) view.findViewById(R.id.pengirimanTextViewProfilkuFragment);
+        TextView pembatalanTextView = (TextView) view.findViewById(R.id.pembatalanTextViewProfilkuFragment);
+
+        TextView penilaiankuTextView = (TextView) view.findViewById(R.id.penilaiankuTextViewProfilkuFragment);
+        TextView terakhirDilihatTextView = (TextView) view.findViewById(R.id.terakhirDilihatTextViewProfilkuFragment);
+        TextView favoritkuTextView = (TextView) view.findViewById(R.id.favoritkuTextViewProfilkuFragment);
+        TextView postingankuTextView = (TextView) view.findViewById(R.id.postingankuTextViewProfilkuFragment);
+        TextView riwayatPembelianTextView = (TextView) view.findViewById(R.id.riwayatPembelianTextViewProfilkuFragment);
+
+        logOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                FirebaseAuth.getInstance().signOut();
+
+                Intent toLogInActivity = new Intent (getActivity(), LogInActivity.class);
+                startActivity(toLogInActivity);
+            }
+        });
+
         return view;
     }
 
