@@ -55,11 +55,12 @@
                     android:textSize="18sp" />
             </LinearLayout>
 
-            <ImageView
+            <ImageButton
+                android:id="@+id/sgmLogoImageViewProfilkuFragment"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_gravity="center"
-                android:src="@drawable/sgm"
+                android:background="@drawable/sgm"
                 android:layout_marginLeft="10dp"/>
         </LinearLayout>
 

@@ -87,9 +87,9 @@ public class LogInActivity extends AppCompatActivity {
 
                     logInProgressDialog.dismiss();
 
-                    Intent toMapsActivity = new Intent(LogInActivity.this, MainActivity.class);
-                    toMapsActivity.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                    startActivity(toMapsActivity);
+                    Intent toMainActivity = new Intent(LogInActivity.this, MainActivity.class);
+                    toMainActivity.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(toMainActivity);
                     finish();
                 }
                 else{

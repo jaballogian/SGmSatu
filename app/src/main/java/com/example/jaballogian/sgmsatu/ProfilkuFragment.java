@@ -1,6 +1,7 @@
 package com.example.jaballogian.sgmsatu;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
@@ -11,6 +12,8 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 
 /**
@@ -81,6 +84,8 @@ public class ProfilkuFragment extends Fragment {
         ImageButton postingankuImageButton = (ImageButton) view.findViewById(R.id.postingankuImageButtonProfilkuFragment);
         ImageButton riwayatPembelianImageButton = (ImageButton) view.findViewById(R.id.riwayatPembelianImageButtonProfilkuFragment);
 
+        ImageButton logOut = (ImageButton) view.findViewById(R.id.sgmLogoImageViewProfilkuFragment);
+
         TextView belumBayarTextView = (TextView) view.findViewById(R.id.belumBayarTextViewProfilkuFragment);
         TextView pengemasanTextView = (TextView) view.findViewById(R.id.pengemasanTextViewProfilkuFragment);
         TextView pengirimanTextView = (TextView) view.findViewById(R.id.pengirimanTextViewProfilkuFragment);
@@ -91,6 +96,17 @@ public class ProfilkuFragment extends Fragment {
         TextView favoritkuTextView = (TextView) view.findViewById(R.id.favoritkuTextViewProfilkuFragment);
         TextView postingankuTextView = (TextView) view.findViewById(R.id.postingankuTextViewProfilkuFragment);
         TextView riwayatPembelianTextView = (TextView) view.findViewById(R.id.riwayatPembelianTextViewProfilkuFragment);
+
+        logOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                FirebaseAuth.getInstance().signOut();
+
+                Intent toLogInActivity = new Intent (getActivity(), LogInActivity.class);
+                startActivity(toLogInActivity);
+            }
+        });
 
         return view;
     }
