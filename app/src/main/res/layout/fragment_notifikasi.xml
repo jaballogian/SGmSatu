@@ -5,10 +5,44 @@
     android:layout_height="match_parent"
     tools:context=".NotifikasiFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="notifikasi fragment" />
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/colorPrimaryDark">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="Notifikasi"
+                android:textSize="20sp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:textColor="@color/white"/>
+
+            <ImageButton
+                android:id="@+id/troliImageButtonNotifikasiFragment"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_shopping_cart_white_36dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"/>
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listNotifikasiListViewNotifikasiFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        </ListView>
+    </LinearLayout>
 
 </FrameLayout>
