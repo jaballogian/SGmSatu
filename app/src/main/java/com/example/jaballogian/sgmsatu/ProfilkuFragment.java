@@ -97,6 +97,188 @@ public class ProfilkuFragment extends Fragment {
         TextView postingankuTextView = (TextView) view.findViewById(R.id.postingankuTextViewProfilkuFragment);
         TextView riwayatPembelianTextView = (TextView) view.findViewById(R.id.riwayatPembelianTextViewProfilkuFragment);
 
+        belumBayarImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent toDataProfilkuActivity = new Intent (getActivity(), DataProfilkuActivity.class);
+                toDataProfilkuActivity.putExtra("Activity Title", "Belum Bayar");
+                startActivity(toDataProfilkuActivity);
+
+            }
+        });
+
+        belumBayarTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent toDataProfilkuActivity = new Intent (getActivity(), DataProfilkuActivity.class);
+                toDataProfilkuActivity.putExtra("Activity Title", "Belum Bayar");
+                startActivity(toDataProfilkuActivity);
+
+            }
+        });
+
+        pengemasanImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent toDataProfilkuActivity = new Intent (getActivity(), DataProfilkuActivity.class);
+                toDataProfilkuActivity.putExtra("Activity Title", "Pengemasan");
+                startActivity(toDataProfilkuActivity);
+            }
+        });
+
+        pengemasanTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent toDataProfilkuActivity = new Intent (getActivity(), DataProfilkuActivity.class);
+                toDataProfilkuActivity.putExtra("Activity Title", "Pengemasan");
+                startActivity(toDataProfilkuActivity);
+            }
+        });
+
+        pengirimanImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent toDataProfilkuActivity = new Intent (getActivity(), DataProfilkuActivity.class);
+                toDataProfilkuActivity.putExtra("Activity Title", "Pengiriman");
+                startActivity(toDataProfilkuActivity);
+            }
+        });
+
+        pengirimanTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent toDataProfilkuActivity = new Intent (getActivity(), DataProfilkuActivity.class);
+                toDataProfilkuActivity.putExtra("Activity Title", "Pengiriman");
+                startActivity(toDataProfilkuActivity);
+            }
+        });
+
+        pembatalanImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent toDataProfilkuActivity = new Intent (getActivity(), DataProfilkuActivity.class);
+                toDataProfilkuActivity.putExtra("Activity Title", "Pembatalan");
+                startActivity(toDataProfilkuActivity);
+            }
+        });
+
+        pembatalanTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent toDataProfilkuActivity = new Intent (getActivity(), DataProfilkuActivity.class);
+                toDataProfilkuActivity.putExtra("Activity Title", "Pembatalan");
+                startActivity(toDataProfilkuActivity);
+            }
+        });
+
+        penilaiankuImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent toDataProfilkuActivity = new Intent (getActivity(), DataProfilkuActivity.class);
+                toDataProfilkuActivity.putExtra("Activity Title", "Penilaianku");
+                startActivity(toDataProfilkuActivity);
+            }
+        });
+
+        penilaiankuTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent toDataProfilkuActivity = new Intent (getActivity(), DataProfilkuActivity.class);
+                toDataProfilkuActivity.putExtra("Activity Title", "Penliaianku");
+                startActivity(toDataProfilkuActivity);
+            }
+        });
+
+        terakhirDilihatImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent toDataProfilkuActivity = new Intent (getActivity(), DataProfilkuActivity.class);
+                toDataProfilkuActivity.putExtra("Activity Title", "Terakhir Dilihat");
+                startActivity(toDataProfilkuActivity);
+            }
+        });
+
+        terakhirDilihatTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent toDataProfilkuActivity = new Intent (getActivity(), DataProfilkuActivity.class);
+                toDataProfilkuActivity.putExtra("Activity Title", "Terakhir Dilihat");
+                startActivity(toDataProfilkuActivity);
+            }
+        });
+
+        favoriktuImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent toDataProfilkuActivity = new Intent (getActivity(), DataProfilkuActivity.class);
+                toDataProfilkuActivity.putExtra("Activity Title", "Favoritku");
+                startActivity(toDataProfilkuActivity);
+            }
+        });
+
+        favoritkuTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent toDataProfilkuActivity = new Intent (getActivity(), DataProfilkuActivity.class);
+                toDataProfilkuActivity.putExtra("Activity Title", "Favoritku");
+                startActivity(toDataProfilkuActivity);
+            }
+        });
+
+        postingankuImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent toDataProfilkuActivity = new Intent (getActivity(), DataProfilkuActivity.class);
+                toDataProfilkuActivity.putExtra("Activity Title", "Postinganku");
+                startActivity(toDataProfilkuActivity);
+            }
+        });
+
+        postingankuTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent toDataProfilkuActivity = new Intent (getActivity(), DataProfilkuActivity.class);
+                toDataProfilkuActivity.putExtra("Activity Title", "Postinganku");
+                startActivity(toDataProfilkuActivity);
+            }
+        });
+
+        riwayatPembelianImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent toDataProfilkuActivity = new Intent (getActivity(), DataProfilkuActivity.class);
+                toDataProfilkuActivity.putExtra("Activity Title", "Riwayat Pembelian");
+                startActivity(toDataProfilkuActivity);
+            }
+        });
+
+        riwayatPembelianTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent toDataProfilkuActivity = new Intent (getActivity(), DataProfilkuActivity.class);
+                toDataProfilkuActivity.putExtra("Activity Title", "Riwayat Pembelian");
+                startActivity(toDataProfilkuActivity);
+            }
+        });
+
         logOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

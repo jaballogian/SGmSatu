@@ -24,15 +24,7 @@
             android:label="@string/title_activity_main" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LogInActivity" />
-        <activity android:name=".BelumBayarActivity" />
-        <activity android:name=".PengemasanActivity" />
-        <activity android:name=".PengirimanActivity" />
-        <activity android:name=".PembatalanActivity" />
-        <activity android:name=".PenilaiankuActivity" />
-        <activity android:name=".TerakhirDilihatActivity" />
-        <activity android:name=".FavoritkuActivity" />
-        <activity android:name=".PostingankuActivity" />
-        <activity android:name=".RiwayatPembelianActivity"></activity>
+        <activity android:name=".DataProfilkuActivity"></activity>
     </application>
 
 </manifest>
