@@ -11,7 +11,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:name="com.activeandroid.app.Application">
         <activity android:name=".SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,7 +33,14 @@
         <activity android:name=".TerakhirDilihatActivity" />
         <activity android:name=".FavoritkuActivity" />
         <activity android:name=".PostingankuActivity" />
-        <activity android:name=".RiwayatPembelianActivity"></activity>
+        <activity android:name=".RiwayatPembelianActivity" />
+        <activity android:name=".DetailActivity"></activity>
+
+        <meta-data android:name="AA_DB_NAME" android:value="sgm.db" />
+        <meta-data android:name="AA_DB_VERSION" android:value="9" />
+        <meta-data
+            android:name="AA_MODELS"
+            android:value="com.example.jaballogian.sgmsatu.model.Product" />
     </application>
 
 </manifest>
