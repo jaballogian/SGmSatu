@@ -1,16 +1,21 @@
 package com.example.jaballogian.sgmsatu;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.SearchView;
-import android.widget.Toast;
+
+import com.example.jaballogian.sgmsatu.model.Product;
+
+import java.util.List;
 
 
 /**
@@ -106,7 +111,105 @@ public class BerandaFragment extends Fragment {
 
     private void bindEvent()
     {
+        imgBtnMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent main = new Intent(v.getContext(), DetailActivity.class);
+                main.putExtra("id", 1);
+                startActivity(main);
+            }
+        });
 
+        imgBtnSide[0].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent main = new Intent(v.getContext(), DetailActivity.class);
+                main.putExtra("id", 2);
+                startActivity(main);
+            }
+        });
+
+        imgBtnSide[1].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent main = new Intent(v.getContext(), DetailActivity.class);
+                main.putExtra("id", 3);
+                startActivity(main);
+            }
+        });
+
+        imgBtnSide[2].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent main = new Intent(v.getContext(), DetailActivity.class);
+                main.putExtra("id", 4);
+                startActivity(main);
+            }
+        });
+
+        imgBtnMiddle[0].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent main = new Intent(v.getContext(), DetailActivity.class);
+                main.putExtra("id", 5);
+                startActivity(main);
+            }
+        });
+
+        imgBtnMiddle[1].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent main = new Intent(v.getContext(), DetailActivity.class);
+                main.putExtra("id", 6);
+                startActivity(main);
+            }
+        });
+
+        imgBtnMiddle[2].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent main = new Intent(v.getContext(), DetailActivity.class);
+                main.putExtra("id", 7);
+                startActivity(main);
+            }
+        });
+
+        imgBtnBottom[0].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent main = new Intent(v.getContext(), DetailActivity.class);
+                main.putExtra("id", 8);
+                startActivity(main);
+            }
+        });
+
+        imgBtnBottom[1].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent main = new Intent(v.getContext(), DetailActivity.class);
+                main.putExtra("id", 9);
+                startActivity(main);
+            }
+        });
+
+        imgBtnBottom[2].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent main = new Intent(v.getContext(), DetailActivity.class);
+                main.putExtra("id", 10);
+                startActivity(main);
+            }
+        });
+
+        btnSelengkapnya.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                List<Product> products = Product.listAll();
+                for (Product product:products) {
+                    Log.d("sgm", String.valueOf(product.getId())+ " => " + product.toString());
+                }
+            }
+        });
     }
 
     // TODO: Rename method, update argument and hook method into UI event
