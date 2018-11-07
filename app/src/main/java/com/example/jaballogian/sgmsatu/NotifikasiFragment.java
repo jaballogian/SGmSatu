@@ -3,10 +3,13 @@ package com.example.jaballogian.sgmsatu;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.Toast;
 
 
@@ -66,6 +69,11 @@ public class NotifikasiFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_notifikasi, container, false);
+
+        ImageButton troli = (ImageButton) view.findViewById(R.id.troliImageButtonNotifikasiFragment);
+
+        ListView listNotifikasi = (ListView) view.findViewById(R.id.listNotifikasiListViewNotifikasiFragment);
+
         return view;
     }
 
