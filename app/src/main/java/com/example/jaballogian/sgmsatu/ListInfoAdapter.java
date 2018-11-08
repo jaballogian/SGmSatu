@@ -23,7 +23,7 @@ public class ListInfoAdapter extends BaseAdapter {
 
     private class ViewHolder{
 
-        //ImageView imageGambar;
+        ImageView imageGambar;
         TextView textJudul, textIsi;
     }
 
@@ -39,13 +39,13 @@ public class ListInfoAdapter extends BaseAdapter {
         if(viewHolder == null){
 
             viewHolder = new ViewHolder();
-            //viewHolder.imageGambar = view.findViewById(R.id.gambarImageViewListInfo);
+            viewHolder.imageGambar = view.findViewById(R.id.gambarImageViewListInfo);
             viewHolder.textJudul = view.findViewById(R.id.judulTextViewListInfo);
             viewHolder.textIsi = view.findViewById(R.id.isiTextViewListInfo);
             view.setTag(viewHolder);
         }
 
-        //viewHolder.imageGambar.setImageDrawable(mListInfo.get(position));
+        viewHolder.imageGambar.setImageDrawable(mListInfo.get(position).getGambar());
         viewHolder.textJudul.setText(mListInfo.get(position).getJudul());
         viewHolder.textIsi.setText(mListInfo.get(position).getIsi());
 
