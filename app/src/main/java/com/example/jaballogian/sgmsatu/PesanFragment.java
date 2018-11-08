@@ -69,10 +69,6 @@ public class PesanFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_pesan, container, false);
 
-        ImageButton troli = (ImageButton) view.findViewById(R.id.troliImageButtonPesanFragment);
-
-        ListView listChat = (ListView) view.findViewById(R.id.listPesanListViewPesanFragment);
-
         return view;
     }
 

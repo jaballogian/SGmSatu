@@ -70,10 +70,6 @@ public class NotifikasiFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_notifikasi, container, false);
 
-        ImageButton troli = (ImageButton) view.findViewById(R.id.troliImageButtonNotifikasiFragment);
-
-        ListView listNotifikasi = (ListView) view.findViewById(R.id.listNotifikasiListViewNotifikasiFragment);
-
         return view;
     }
 

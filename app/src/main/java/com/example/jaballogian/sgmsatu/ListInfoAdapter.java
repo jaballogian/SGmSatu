@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -22,6 +23,7 @@ public class ListInfoAdapter extends BaseAdapter {
 
     private class ViewHolder{
 
+        //ImageView imageGambar;
         TextView textJudul, textIsi;
     }
 
@@ -37,11 +39,13 @@ public class ListInfoAdapter extends BaseAdapter {
         if(viewHolder == null){
 
             viewHolder = new ViewHolder();
+            //viewHolder.imageGambar = view.findViewById(R.id.gambarImageViewListInfo);
             viewHolder.textJudul = view.findViewById(R.id.judulTextViewListInfo);
             viewHolder.textIsi = view.findViewById(R.id.isiTextViewListInfo);
             view.setTag(viewHolder);
         }
 
+        //viewHolder.imageGambar.setImageDrawable(mListInfo.get(position));
         viewHolder.textJudul.setText(mListInfo.get(position).getJudul());
         viewHolder.textIsi.setText(mListInfo.get(position).getIsi());
 
