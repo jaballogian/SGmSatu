@@ -1,8 +1,11 @@
 package com.example.jaballogian.sgmsatu;
 
+import android.media.Image;
+
 public class ListInfo {
 
     private String judul, isi;
+    //private Image gambar;
 
     ListInfo(){
 
@@ -13,6 +16,21 @@ public class ListInfo {
         this.judul = judul;
         this.isi = isi;
     }
+
+//    public ListInfo (Image gambar, String judul, String isi){
+//
+//        this.gambar = gambar;
+//        this.judul = judul;
+//        this.isi = isi;
+//    }
+
+//    public Image getGambar() {
+//        return gambar;
+//    }
+//
+//    public void setGambar(Image gambar) {
+//        this.gambar = gambar;
+//    }
 
     public String getIsi() {
         return isi;
