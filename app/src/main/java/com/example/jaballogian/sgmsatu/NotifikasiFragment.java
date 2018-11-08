@@ -5,11 +5,15 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -69,6 +73,81 @@ public class NotifikasiFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_notifikasi, container, false);
+
+        LinearLayout notifikasi1 = (LinearLayout) view.findViewById(R.id.notifikasi1LinearLayoutNotifikasiFragment);
+        LinearLayout notifikasi2 = (LinearLayout) view.findViewById(R.id.notifikasi2LinearLayoutNotifikasiFragment);
+
+        TextView judulNotifikasi1 = (TextView) view.findViewById(R.id.judulNotifikasi1TextViewNotifikasiFragment);
+        TextView isiNotifkikasi1 = (TextView) view.findViewById(R.id.isiNotifikasi1TextViewNotifikasiFragment);
+        TextView judulNotifkikasi2 = (TextView) view.findViewById(R.id.judulNotifikasi2TextViewNotifikasiFragment);
+        TextView isiNotifkikasi2 = (TextView) view.findViewById(R.id.isiNotifikasi2TextViewNotifikasiFragment);
+
+        notifikasi1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                AlertDialog builder = new AlertDialog.Builder(getActivity()).create();
+                builder.setTitle("Promo Terpopuler");
+                builder.setMessage("Terus belanja dengan promo SGM");
+                builder.show();
+            }
+        });
+
+//        judulNotifikasi1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                AlertDialog builder = new AlertDialog.Builder(getActivity()).create();
+//                builder.setTitle("Promo Terpopuler");
+//                builder.setMessage("Terus belanja dengan promo SGM");
+//                builder.show();
+//            }
+//        });
+//
+//        isiNotifkikasi1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                AlertDialog builder = new AlertDialog.Builder(getActivity()).create();
+//                builder.setTitle("Promo Terpopuler");
+//                builder.setMessage("Terus belanja dengan promo SGM");
+//                builder.show();
+//            }
+//        });
+
+        notifikasi2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                AlertDialog builder = new AlertDialog.Builder(getActivity()).create();
+                builder.setTitle("Event");
+                builder.setMessage("Ayo ikut event SGM bersama buah hati");
+                builder.show();
+            }
+        });
+
+//        judulNotifkikasi2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                AlertDialog builder = new AlertDialog.Builder(getActivity()).create();
+//                builder.setTitle("Event");
+//                builder.setMessage("Ayo ikut event SGM bersama buah hati");
+//                builder.show();
+//            }
+//        });
+//
+//        isiNotifkikasi2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                AlertDialog builder = new AlertDialog.Builder(getActivity()).create();
+//                builder.setTitle("Event");
+//                builder.setMessage("Ayo ikut event SGM bersama buah hati");
+//                builder.show();
+//            }
+//        });
+
 
         return view;
     }

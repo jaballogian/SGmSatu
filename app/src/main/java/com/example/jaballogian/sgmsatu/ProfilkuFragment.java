@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 
 /**
@@ -72,6 +79,55 @@ public class ProfilkuFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_profilku, container, false);
+
+        final TextView namaUser = (TextView) view.findViewById(R.id.namaUserTextViewProfilkuFragment);
+        final TextView nomorTelepon = (TextView) view.findViewById(R.id.noTelpUserTextViewProfilkuFragment);
+        final TextView pointUser = (TextView) view.findViewById(R.id.pointUserTextViewProfilkuFragment);
+
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        String uID = currentUser.getUid();
+
+        final DatabaseReference namaUserReference = FirebaseDatabase.getInstance().getReference().child("Users").child(uID).child("Nama Lengkap");
+        namaUserReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                namaUser.setText(dataSnapshot.getValue(String.class));
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+        final DatabaseReference nomorTeleponUserReference = FirebaseDatabase.getInstance().getReference().child("Users").child(uID).child("No Telpon");
+        nomorTeleponUserReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                nomorTelepon.setText(dataSnapshot.getValue(String.class));
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+//        final DatabaseReference pointUserReference = FirebaseDatabase.getInstance().getReference().child("Users").child(uID).child("Point");
+//        pointUserReference.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//
+//                pointUser.setText(dataSnapshot.getValue(String.class));
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError databaseError) {
+//
+//            }
+//        });
 
         ImageButton belumBayarImageButton = (ImageButton) view.findViewById(R.id.belumBayarImageButtonProfilkuFragment);
         ImageButton pengemasanImageButton = (ImageButton) view.findViewById(R.id.pengemasanImageButtonProfilkuFragment);

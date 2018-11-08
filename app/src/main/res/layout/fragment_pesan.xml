@@ -37,6 +37,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/pesan1LinearLayoutPesanFragment"
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -58,7 +59,7 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="25dp"
+                    android:layout_height="wrap_content"
                     android:text="Vicky Saputra"
                     android:textSize="18sp"
                     android:gravity="center_vertical"
@@ -66,7 +67,7 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="25dp"
+                    android:layout_height="wrap_content"
                     android:text="Wah promo seperti apa? Sangat menarik"
                     android:textSize="16sp"
                     android:gravity="center_vertical"
@@ -77,6 +78,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/pesan2LinearLayoutPesanFragment"
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -98,7 +100,7 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="25dp"
+                    android:layout_height="wrap_content"
                     android:text="Veren"
                     android:textSize="18sp"
                     android:gravity="center_vertical"
@@ -106,7 +108,7 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="25dp"
+                    android:layout_height="wrap_content"
                     android:text="Nutrisi baik seperti apa"
                     android:textSize="16sp"
                     android:gravity="center_vertical"
@@ -117,6 +119,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/pesan3LinearLayoutPesanFragment"
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -138,7 +141,7 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="25dp"
+                    android:layout_height="wrap_content"
                     android:text="Ayu"
                     android:textSize="18sp"
                     android:gravity="center_vertical"
@@ -146,7 +149,7 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="25dp"
+                    android:layout_height="wrap_content"
                     android:text="Semoga si kecil cepat sembuh"
                     android:textSize="16sp"
                     android:gravity="center_vertical"
