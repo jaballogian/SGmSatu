@@ -24,7 +24,8 @@
             android:label="@string/title_activity_main" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LogInActivity" />
-        <activity android:name=".DataProfilkuActivity"></activity>
+        <activity android:name=".DataProfilkuActivity" />
+        <activity android:name=".ChatingActivity"></activity>
     </application>
 
 </manifest>
