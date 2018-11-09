@@ -19,7 +19,7 @@
         android:textColor="@color/white"/>
 
     <LinearLayout
-        android:id="@+id/pesan1LinearLayoutPesanFragment"
+        android:id="@+id/dataProfilLinearLayoutProfilkuFragment"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

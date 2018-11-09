@@ -82,7 +82,6 @@ public class PesanFragment extends Fragment {
                 Intent toChatingActivity = new Intent(getActivity(), ChatingActivity.class);
                 toChatingActivity.putExtra("Nama Pengirim Pesan","Vicky Saputra");
                 toChatingActivity.putExtra("Isi Pesan","Wah promo seperti apa? Sangat menarik");
-                toChatingActivity.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(toChatingActivity);
             }
         });
@@ -94,7 +93,6 @@ public class PesanFragment extends Fragment {
                 Intent toChatingActivity = new Intent(getActivity(), ChatingActivity.class);
                 toChatingActivity.putExtra("Nama Pengirim Pesan","Veren");
                 toChatingActivity.putExtra("Isi Pesan","Nutrisi baik seperti apa");
-                toChatingActivity.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(toChatingActivity);
             }
         });
@@ -106,7 +104,6 @@ public class PesanFragment extends Fragment {
                 Intent toChatingActivity = new Intent(getActivity(), ChatingActivity.class);
                 toChatingActivity.putExtra("Nama Pengirim Pesan","Ayu");
                 toChatingActivity.putExtra("Isi Pesan","Semoga si kecil cepat sembuh");
-                toChatingActivity.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(toChatingActivity);
             }
         });

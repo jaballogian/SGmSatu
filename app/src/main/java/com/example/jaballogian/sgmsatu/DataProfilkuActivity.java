@@ -3,9 +3,14 @@ package com.example.jaballogian.sgmsatu;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.jaballogian.sgmsatu.model.Product;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -18,10 +23,21 @@ public class DataProfilkuActivity extends AppCompatActivity {
 
     private TextView activityTitle, namaBarang, jumlahBarang, opsiPengiriman, opsiPembayaran;
 
+    private String opsiBayarText[] = {"", "Kartu Kredit", "Atm / Transfer Bank", "Go-Pay", "OVO", "Pulsa"};
+
+    private String opsiKirimText[] = {"", "Kurir Resmi SGM\nditerima dalam 0-1 hari"
+            , "JNE REG\nditerima dalam 3-4 hari"
+            , "J&T Express\nditerima dalam 5-9 hari"
+            , "TIKI\nditerima dalam 3-4 hari"};
+
+    private long hargaKirim[] = {0, 2000, 44000, 47000, 45000};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data_profilku);
+
+        final LinearLayout linearLayout = (LinearLayout) findViewById(R.id.dataProfilLinearLayoutProfilkuFragment);
 
         activityTitle = (TextView) findViewById(R.id.activityTitleDataProfilkuActivity);
         namaBarang = (TextView) findViewById(R.id.namaBarangTextViewDataProfilkuActivity);
@@ -29,7 +45,7 @@ public class DataProfilkuActivity extends AppCompatActivity {
         opsiPengiriman = (TextView) findViewById(R.id.opsiPengirimanTextViewDataProfilkuActivity);
         opsiPembayaran = (TextView) findViewById(R.id.opsiPembayaranTextViewDataProfilkuActivity);
 
-        String valueFromProfilkuFragment;
+        final String valueFromProfilkuFragment;
         if (savedInstanceState == null) {
             Bundle extras = getIntent().getExtras();
             if(extras == null) {
@@ -43,6 +59,43 @@ public class DataProfilkuActivity extends AppCompatActivity {
 
         activityTitle.setText(valueFromProfilkuFragment);
 
+        if(valueFromProfilkuFragment.equals("Belum Bayar")){
+            Log.d("data", "visible");
+            linearLayout.setVisibility(View.VISIBLE);
+        }
+        else if (valueFromProfilkuFragment.equals("Pengemasan")){
+
+            linearLayout.setVisibility(View.INVISIBLE);
+        }
+        else if(valueFromProfilkuFragment.equals("Pengiriman")){
+
+            linearLayout.setVisibility(View.INVISIBLE);
+        }
+        else if(valueFromProfilkuFragment.equals("Pembatalan")){
+
+            linearLayout.setVisibility(View.VISIBLE);
+        }
+        else if(valueFromProfilkuFragment.equals("Penilaianku")){
+
+            linearLayout.setVisibility(View.INVISIBLE);
+        }
+        else if(valueFromProfilkuFragment.equals("Terakhir Dilihat")){
+
+            linearLayout.setVisibility(View.VISIBLE);
+        }
+        else if(valueFromProfilkuFragment.equals("Favoritku")){
+
+            linearLayout.setVisibility(View.INVISIBLE);
+        }
+        else if(valueFromProfilkuFragment.equals("Postinganku")){
+
+            linearLayout.setVisibility(View.INVISIBLE);
+        }
+        else if(valueFromProfilkuFragment.equals("Riwayat Pembelian")){
+
+            linearLayout.setVisibility(View.VISIBLE);
+        }
+
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
         String uID = currentUser.getUid();
 
@@ -51,18 +104,19 @@ public class DataProfilkuActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                String idBarang = dataSnapshot.child("Id Barang").getValue().toString();
-//                if(idBarang)
+                Integer idBarang = Integer.valueOf(dataSnapshot.child("Id Barang").getValue().toString());
+                Product product = Product.load(Product.class, idBarang);
+                namaBarang.setText(product.judul);
 
                 jumlahBarang.setText(dataSnapshot.child("Jumlah Barang").getValue().toString());
 
-                String opsiBayar = dataSnapshot.child("Opsi Bayar").getValue().toString();
-//                if(opsiBayar)
+                Integer opsiBayar = Integer.valueOf(dataSnapshot.child("Opsi Bayar").getValue().toString());
+                opsiPembayaran.setText(opsiBayarText[opsiBayar]);
 
-                String opsiKirim = dataSnapshot.child("Opsi Kirim").getValue().toString();
-//                if(opsiKirim)
+                Integer opsiKirim = Integer.valueOf(dataSnapshot.child("Opsi Kirim").getValue().toString());
+                opsiPengiriman.setText(opsiKirimText[opsiKirim]);
 
-                String status = dataSnapshot.child("Status").getValue().toString();
+//                String status = dataSnapshot.child("Status").getValue().toString();
 
             }
 
@@ -72,41 +126,6 @@ public class DataProfilkuActivity extends AppCompatActivity {
             }
         });
 
-        if(valueFromProfilkuFragment == "Belum Bayar"){
 
-
-        }
-        else if (valueFromProfilkuFragment == "Pengemasan"){
-
-
-        }
-        else if(valueFromProfilkuFragment == "Pengiriman"){
-
-
-        }
-        else if(valueFromProfilkuFragment == "Pembatalan"){
-
-
-        }
-        else if(valueFromProfilkuFragment == "Penilaianku"){
-
-
-        }
-        else if(valueFromProfilkuFragment == "Terakhir Dilihat"){
-
-
-        }
-        else if(valueFromProfilkuFragment == "Favoritku"){
-
-
-        }
-        else if(valueFromProfilkuFragment == "Postinganku"){
-
-
-        }
-        else if(valueFromProfilkuFragment == "Riwayat Pembelian"){
-
-
-        }
     }
 }

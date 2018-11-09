@@ -94,7 +94,8 @@ public class ProfilkuFragment extends Fragment {
 
                 namaUser.setText(dataSnapshot.child("Nama Lengkap").getValue().toString());
                 nomorTelepon.setText(dataSnapshot.child("No Telpon").getValue().toString());
-                pointUser.setText(dataSnapshot.child("Point").getValue().toString());
+                String point = dataSnapshot.child("Point").getValue().toString();
+                pointUser.setText(point + " Point");
             }
 
             @Override
