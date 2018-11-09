@@ -87,12 +87,14 @@ public class ProfilkuFragment extends Fragment {
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
         String uID = currentUser.getUid();
 
-        final DatabaseReference namaUserReference = FirebaseDatabase.getInstance().getReference().child("Users").child(uID).child("Nama Lengkap");
-        namaUserReference.addValueEventListener(new ValueEventListener() {
+        final DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Users").child(uID);
+        databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                namaUser.setText(dataSnapshot.getValue(String.class));
+                namaUser.setText(dataSnapshot.child("Nama Lengkap").getValue().toString());
+                nomorTelepon.setText(dataSnapshot.child("No Telpon").getValue().toString());
+                pointUser.setText(dataSnapshot.child("Point").getValue().toString());
             }
 
             @Override
@@ -100,34 +102,6 @@ public class ProfilkuFragment extends Fragment {
 
             }
         });
-
-        final DatabaseReference nomorTeleponUserReference = FirebaseDatabase.getInstance().getReference().child("Users").child(uID).child("No Telpon");
-        nomorTeleponUserReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
-                nomorTelepon.setText(dataSnapshot.getValue(String.class));
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-
-//        final DatabaseReference pointUserReference = FirebaseDatabase.getInstance().getReference().child("Users").child(uID).child("Point");
-//        pointUserReference.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//
-//                pointUser.setText(dataSnapshot.getValue(String.class));
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError databaseError) {
-//
-//            }
-//        });
 
         ImageButton belumBayarImageButton = (ImageButton) view.findViewById(R.id.belumBayarImageButtonProfilkuFragment);
         ImageButton pengemasanImageButton = (ImageButton) view.findViewById(R.id.pengemasanImageButtonProfilkuFragment);
