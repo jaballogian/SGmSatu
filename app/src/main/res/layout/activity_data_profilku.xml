@@ -18,10 +18,65 @@
         android:background="@color/colorPrimaryDark"
         android:textColor="@color/white"/>
 
-    <ListView
-        android:id="@+id/listDataProfilListViewDataProfilActivity"
+    <LinearLayout
+        android:id="@+id/pesan1LinearLayoutPesanFragment"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </ListView>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/pink">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/sgm"
+            android:layout_marginLeft="10dp"/>
+
+        <LinearLayout
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/namaBarangTextViewDataProfilkuActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nama Barang"
+                android:textSize="18sp"
+                android:gravity="center_vertical"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/opsiPembayaranTextViewDataProfilkuActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Opsi Pembayaran"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:textColor="@color/gray600" />
+
+            <TextView
+                android:id="@+id/opsiPengirimanTextViewDataProfilkuActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Opsi Pengiriman"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:textColor="@color/gray600"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/jumlahBarangTextViewDataProfilkuActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
 
 </LinearLayout>

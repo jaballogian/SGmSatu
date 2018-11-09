@@ -151,6 +151,7 @@ public class RegisterActivity extends AppCompatActivity {
                     identitasUser.put("Ulangi Password", ulangiPassword);
                     identitasUser.put("Jenis Kelamin", jenisKelamin);
                     identitasUser.put("Opsi User", opsiUser);
+                    identitasUser.put("Point", "100");
 
                     mDatabase.setValue(identitasUser).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
