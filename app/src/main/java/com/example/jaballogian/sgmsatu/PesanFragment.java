@@ -1,12 +1,16 @@
 package com.example.jaballogian.sgmsatu;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.Toast;
 
 
@@ -66,6 +70,47 @@ public class PesanFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_pesan, container, false);
+
+        LinearLayout pesan1 = (LinearLayout) view.findViewById(R.id.pesan1LinearLayoutPesanFragment);
+        LinearLayout pesan2 = (LinearLayout) view.findViewById(R.id.pesan2LinearLayoutPesanFragment);
+        LinearLayout pesan3 = (LinearLayout) view.findViewById(R.id.pesan3LinearLayoutPesanFragment);
+
+        pesan1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent toChatingActivity = new Intent(getActivity(), ChatingActivity.class);
+                toChatingActivity.putExtra("Nama Pengirim Pesan","Vicky Saputra");
+                toChatingActivity.putExtra("Isi Pesan","Wah promo seperti apa? Sangat menarik");
+                toChatingActivity.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(toChatingActivity);
+            }
+        });
+
+        pesan2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent toChatingActivity = new Intent(getActivity(), ChatingActivity.class);
+                toChatingActivity.putExtra("Nama Pengirim Pesan","Veren");
+                toChatingActivity.putExtra("Isi Pesan","Nutrisi baik seperti apa");
+                toChatingActivity.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(toChatingActivity);
+            }
+        });
+
+        pesan3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent toChatingActivity = new Intent(getActivity(), ChatingActivity.class);
+                toChatingActivity.putExtra("Nama Pengirim Pesan","Ayu");
+                toChatingActivity.putExtra("Isi Pesan","Semoga si kecil cepat sembuh");
+                toChatingActivity.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(toChatingActivity);
+            }
+        });
+
 
         return view;
     }

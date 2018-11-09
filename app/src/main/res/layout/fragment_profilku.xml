@@ -19,7 +19,7 @@
             <ImageView
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:background="@color/colorPrimary"
+                android:background="@drawable/ic_account_circle_white_36dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="20dp"/>
             
@@ -50,7 +50,7 @@
                     android:id="@+id/pointUserTextViewProfilkuFragment"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Point User"
+                    android:text="1000 Point"
                     android:textColor="@color/white"
                     android:textSize="18sp" />
             </LinearLayout>

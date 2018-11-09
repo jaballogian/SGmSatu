@@ -5,10 +5,122 @@
     android:layout_height="match_parent"
     tools:context=".NotifikasiFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="notifikasi fragment" />
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/colorPrimaryDark">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="Notifikasi"
+                android:textSize="20sp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:textColor="@color/white"/>
+
+            <ImageButton
+                android:id="@+id/troliImageButtonNotifikasiFragment"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_shopping_cart_white_36dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/notifikasi1LinearLayoutNotifikasiFragment"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/pink">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/ic_brightness_7_red_36dp"
+                android:layout_marginLeft="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:id="@+id/judulNotifikasi1TextViewNotifikasiFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:text="Promo Terpopuler"
+                    android:textSize="18sp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorAccent"/>
+
+                <TextView
+                    android:id="@+id/isiNotifikasi1TextViewNotifikasiFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:text="Terus belanja dengan promo SGM"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorAccent"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/notifikasi2LinearLayoutNotifikasiFragment"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/pink">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/ic_event_available_blue_36dp"
+                android:layout_marginLeft="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:id="@+id/judulNotifikasi2TextViewNotifikasiFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:text="Event"
+                    android:textSize="18sp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorAccent"/>
+
+                <TextView
+                    android:id="@+id/isiNotifikasi2TextViewNotifikasiFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:text="Ayo ikut event SGM bersama buah hati"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorAccent"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
 
 </FrameLayout>
