@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PengirimanActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".PembayaranActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,7 +17,7 @@
         android:padding="10dp">
 
         <ImageButton
-            android:id="@+id/backImageButtonPengirimanActivity"
+            android:id="@+id/backImageButtonPembayaranActivity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#00000000"
@@ -26,7 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="Opsi Pengiriman"
+            android:text="Opsi Pembayaran"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="22dp" />
 
@@ -37,15 +38,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginVertical="10dp"
-        android:text="OPSI PENGIRIMAN YANG DIDUKUNG SGM" />
+        android:text="OPSI PEMBAYARAN YANG DIDUKUNG SGM" />
 
     <LinearLayout
-        android:id="@+id/resmiLinearLayoutPengirimanActivity"
+        android:id="@+id/kartuKreditLinearLayoutPembayaranActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginVertical="10dp"
         android:background="#F0F0F0"
         android:orientation="horizontal">
+
+        <ImageView
+            android:layout_weight="3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/credit_cards" />
 
         <LinearLayout
             android:layout_weight="1"
@@ -54,32 +62,12 @@
             android:layout_margin="10dp"
             android:background="#00F0F0F0"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Kurir Resmi SGM"
-                android:textColor="@color/colorPrimaryDark"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_weight="1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="diterima dalam 0-1 hari"/>
-
-                <TextView
-                    android:layout_weight="2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Rp2.000"/>
-
-            </LinearLayout>
+                android:text="Kartu Kredit" />
 
         </LinearLayout>
 
@@ -87,13 +75,19 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/jneLinearLayoutPengirimanActivity"
+        android:id="@+id/atmLinearLayoutPembayaranActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginVertical="10dp"
         android:background="#F0F0F0"
-        android:orientation="vertical">
+        android:orientation="horizontal">
 
+        <ImageView
+            android:layout_weight="3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/atm" />
 
         <LinearLayout
             android:layout_weight="1"
@@ -102,32 +96,12 @@
             android:layout_margin="10dp"
             android:background="#00F0F0F0"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="JNE REG"
-                android:textColor="@color/colorPrimaryDark" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_weight="1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="diterima dalam 3-4 hari"/>
-
-                <TextView
-                    android:layout_weight="2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Rp44.000"/>
-
-            </LinearLayout>
+                android:text="ATM / Bank Transfer" />
 
         </LinearLayout>
 
@@ -135,14 +109,19 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/jntLinearLayoutPengirimanActivity"
+        android:id="@+id/gopayLinearLayoutPembayaranActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginVertical="10dp"
         android:background="#F0F0F0"
         android:orientation="horizontal">
 
-
+        <ImageView
+            android:layout_weight="3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/gopay" />
 
         <LinearLayout
             android:layout_weight="1"
@@ -151,32 +130,12 @@
             android:layout_margin="10dp"
             android:background="#00F0F0F0"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="J&amp;T Express"
-                android:textColor="@color/colorPrimaryDark" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_weight="1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="diterima dalam 5-9 hari"/>
-
-                <TextView
-                    android:layout_weight="2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Rp47.000"/>
-
-            </LinearLayout>
+                android:text="Go-Pay" />
 
         </LinearLayout>
 
@@ -184,12 +143,19 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/tikiLinearLayoutPengirimanActivity"
+        android:id="@+id/ovoLinearLayoutPembayaranActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginVertical="10dp"
         android:background="#F0F0F0"
         android:orientation="horizontal">
+
+        <ImageView
+            android:layout_weight="3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/ovo" />
 
         <LinearLayout
             android:layout_weight="1"
@@ -198,32 +164,46 @@
             android:layout_margin="10dp"
             android:background="#00F0F0F0"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TIKI"
-                android:textColor="@color/colorPrimaryDark" />
+                android:text="OVO" />
 
-            <LinearLayout
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pulsaLinearLayoutPembayaranActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:background="#F0F0F0"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_weight="3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/pebayaran" />
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#00F0F0F0"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_weight="1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="diterima dalam 3-4 hari"/>
-
-                <TextView
-                    android:layout_weight="2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Rp45.000"/>
-
-            </LinearLayout>
+                android:text="Pulsa" />
 
         </LinearLayout>
 

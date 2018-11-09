@@ -59,14 +59,16 @@
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
 
             <ImageButton
                 android:id="@+id/mainProductImageButtonBerandaFragment"
                 android:layout_weight="2"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/ic_language_red_36dp"
+                android:layout_height="150dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/main"
                 android:background="@color/white"/>
 
             <LinearLayout
@@ -80,7 +82,8 @@
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:srcCompat="@drawable/ic_language_red_36dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/side0"
                     android:background="@color/white"/>
 
                 <ImageButton
@@ -88,7 +91,8 @@
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:srcCompat="@drawable/ic_language_red_36dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/side1"
                     android:background="@color/white"/>
 
                 <ImageButton
@@ -96,7 +100,8 @@
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:srcCompat="@drawable/ic_language_red_36dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/side2"
                     android:background="@color/white"/>
             </LinearLayout>
 
@@ -106,30 +111,34 @@
             android:layout_weight="2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
 
             <ImageButton
                 android:id="@+id/middleProduct0ImageButtonBerandaFragment"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/ic_language_red_36dp"
+                android:layout_height="75dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/middle0"
                 android:background="@color/white"/>
 
             <ImageButton
                 android:id="@+id/middleProduct1ImageButtonBerandaFragment"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/ic_language_red_36dp"
+                android:layout_height="75dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/middle1"
                 android:background="@color/white"/>
 
             <ImageButton
                 android:id="@+id/middleProduct2ImageButtonBerandaFragment"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/ic_language_red_36dp"
+                android:layout_height="75dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/middle0"
                 android:background="@color/white"/>
 
         </LinearLayout>
@@ -162,30 +171,34 @@
             android:layout_weight="4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
 
             <ImageButton
                 android:id="@+id/bottomProduct0ImageButtonBerandaFragment"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/ic_language_red_36dp"
+                android:layout_height="75dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/bottom0"
                 android:background="@color/white"/>
 
             <ImageButton
                 android:id="@+id/bottomProduct1ImageButtonBerandaFragment"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/ic_language_red_36dp"
+                android:layout_height="75dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/bottom1"
                 android:background="@color/white"/>
 
             <ImageButton
                 android:id="@+id/bottomProduct2ImageButtonBerandaFragment"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/ic_language_red_36dp"
+                android:layout_height="75dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/bottom2"
                 android:background="@color/white"/>
 
         </LinearLayout>

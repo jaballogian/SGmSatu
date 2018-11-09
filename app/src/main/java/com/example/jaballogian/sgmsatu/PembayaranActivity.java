@@ -6,59 +6,67 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
-public class PengirimanActivity extends AppCompatActivity {
+public class PembayaranActivity extends AppCompatActivity {
 
-    LinearLayout llResmi, llJne, llJnt, llTiki;
+    LinearLayout llKartuKredit, llAtm, llGopay, llOvo, llPulsa;
 
     ImageButton imgBtnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pengiriman);
+        setContentView(R.layout.activity_pembayaran);
         bindView();
         bindEvent();
     }
 
     private void bindView(){
-        llResmi = (LinearLayout) findViewById(R.id.resmiLinearLayoutPengirimanActivity);
-        llJne = (LinearLayout) findViewById(R.id.jneLinearLayoutPengirimanActivity);
-        llJnt = (LinearLayout) findViewById(R.id.jntLinearLayoutPengirimanActivity);
-        llTiki = (LinearLayout) findViewById(R.id.tikiLinearLayoutPengirimanActivity);
-        imgBtnBack = (ImageButton) findViewById(R.id.backImageButtonPengirimanActivity);
+        llKartuKredit = (LinearLayout) findViewById(R.id.kartuKreditLinearLayoutPembayaranActivity);
+        llAtm = (LinearLayout) findViewById(R.id.atmLinearLayoutPembayaranActivity);
+        llGopay = (LinearLayout) findViewById(R.id.gopayLinearLayoutPembayaranActivity);
+        llOvo = (LinearLayout) findViewById(R.id.ovoLinearLayoutPembayaranActivity);
+        llPulsa = (LinearLayout) findViewById(R.id.pulsaLinearLayoutPembayaranActivity);
+        imgBtnBack = (ImageButton) findViewById(R.id.backImageButtonPembayaranActivity);
     }
 
     private void bindEvent(){
 
-        llResmi.setOnClickListener(new View.OnClickListener() {
+        llKartuKredit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 setReturn(1);
             }
         });
 
-        llJne.setOnClickListener(new View.OnClickListener() {
+        llAtm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 setReturn(2);
             }
         });
 
-        llJnt.setOnClickListener(new View.OnClickListener() {
+        llGopay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 setReturn(3);
             }
         });
 
-        llTiki.setOnClickListener(new View.OnClickListener() {
+        llOvo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 setReturn(4);
             }
         });
 
+        llPulsa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setReturn(5);
+            }
+        });
 
         imgBtnBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,4 +93,5 @@ public class PengirimanActivity extends AppCompatActivity {
         finish();//finishing activity
         return;
     }
+
 }
