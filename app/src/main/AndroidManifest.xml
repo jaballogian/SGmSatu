@@ -8,9 +8,9 @@
     <application
         android:name="com.activeandroid.app.Application"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/sgm_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/sgm_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".SplashScreenActivity">
@@ -25,14 +25,7 @@
             android:label="@string/title_activity_main" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LogInActivity" />
-        <activity android:name=".BelumBayarActivity" />
-        <activity android:name=".PengemasanActivity" />
         <activity android:name=".PengirimanActivity" />
-        <activity android:name=".PenilaiankuActivity" />
-        <activity android:name=".TerakhirDilihatActivity" />
-        <activity android:name=".FavoritkuActivity" />
-        <activity android:name=".PostingankuActivity" />
-        <activity android:name=".RiwayatPembelianActivity" />
         <activity android:name=".DetailActivity" />
         <activity android:name=".ChatingActivity" />
 
