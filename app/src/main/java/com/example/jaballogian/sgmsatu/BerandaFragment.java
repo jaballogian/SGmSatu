@@ -111,6 +111,14 @@ public class BerandaFragment extends Fragment {
 
     private void bindEvent()
     {
+        btnBeliProduct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent main = new Intent(v.getContext(), BeliProdukActivity.class);
+                startActivity(main);
+            }
+        });
+
         imgBtnMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

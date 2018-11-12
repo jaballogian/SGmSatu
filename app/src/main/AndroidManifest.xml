@@ -47,8 +47,9 @@
             android:value="com.example.jaballogian.sgmsatu.model.Product" />
 
         <activity android:name=".CheckoutActivity" />
-        <activity android:name=".PembayaranActivity"></activity>
-        <activity android:name=".DataProfilkuActivity"></activity>
+        <activity android:name=".PembayaranActivity" />
+        <activity android:name=".DataProfilkuActivity" />
+        <activity android:name=".BeliProdukActivity"></activity>
     </application>
 
 </manifest>
