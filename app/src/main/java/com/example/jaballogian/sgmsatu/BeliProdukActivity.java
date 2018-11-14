@@ -77,7 +77,6 @@ public class BeliProdukActivity extends AppCompatActivity implements View.OnClic
         ((ImageView) findViewById(R.id.bp0side4ImageViewBeliProdukActivity)).setOnClickListener(this);
         ((ImageView) findViewById(R.id.bp0side5ImageViewBeliProdukActivity)).setOnClickListener(this);
 
-
         ((ImageView) findViewById(R.id.bp1side0ImageViewBeliProdukActivity)).setOnClickListener(this);
         ((ImageView) findViewById(R.id.bp1side1ImageViewBeliProdukActivity)).setOnClickListener(this);
         ((ImageView) findViewById(R.id.bp1side2ImageViewBeliProdukActivity)).setOnClickListener(this);
