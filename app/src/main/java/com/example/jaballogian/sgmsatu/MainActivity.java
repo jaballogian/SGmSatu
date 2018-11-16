@@ -90,8 +90,15 @@ public class MainActivity extends AppCompatActivity {
                     "susu",
                     judul,
                     "Coklat",
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
-                    (i+1)*1000
+                    "Masa kehamilan dan menyusui aalah momen yang sangat spesial dan luar biasa  bagi seorang wanita.  SGM Bunda berkomitmen untuk selalu menemani Bunda melalui pemenuhan nutrisi yang lezat agar Bunda sehat, si kecil juga sehat. \n" +
+                            "\n" +
+                            "SGM Bunda dengan PRESINUTRI+ adalah nutrisi khusus untuk masa hamil hingga menyusui dan tinggi mikronutrisi penting untuk  Bunda dan si Kecil. \n" +
+                            "\n" +
+                            "Tersedia dalam rasa:\n" +
+                            "Cokelat ( 150 gr & 300 gr)\n" +
+                            "Stroberi  (150 gr)\n" +
+                            "Jeruk ( 150 gr)",
+                    17000
             );
             product.save();
         }
