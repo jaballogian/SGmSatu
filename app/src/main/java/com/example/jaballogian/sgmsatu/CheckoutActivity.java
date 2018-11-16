@@ -21,6 +21,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.HashMap;
+import java.util.Random;
 
 public class CheckoutActivity extends AppCompatActivity {
 
@@ -29,7 +30,7 @@ public class CheckoutActivity extends AppCompatActivity {
     private Button btnBuatPesanan;
 
     private TextView tvNamaNoHP, tvAlamat, tvKota, tvProvinsi, tvJudul, tvHarga,
-                     tvJumlah, tvPengiriman, tvPembayaran, tvTotalHarga;
+                     tvJumlah, tvPengiriman, tvPembayaran, tvTotalHarga, tvKode;
 
     private DatabaseReference mDatabase;
 
@@ -81,6 +82,9 @@ public class CheckoutActivity extends AppCompatActivity {
         tvPengiriman = (TextView) findViewById(R.id.pengirimanTextViewCheckoutActivity);
         tvProvinsi = (TextView) findViewById(R.id.provinsiTextViewCheckoutActivity);
         tvTotalHarga = (TextView) findViewById(R.id.totalHargaTextViewCheckoutActivity);
+        tvKode = (TextView) findViewById(R.id.randomTextViewCheckoutActivity);
+        Random rand = new Random();
+        tvKode.setText(String.valueOf(rand.nextInt((999999 - 100000) + 1) + 100000));
     }
 
     private void bindEvent()
